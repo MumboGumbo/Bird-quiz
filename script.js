@@ -161,6 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
         audioPlayer.style.display = 'block';
         startQuiz(birdsWeek2); // Start the quiz with Week 2 birds
     });
+    
 
     document.getElementById('test-button').addEventListener('click', function () {
         // Hide all tab buttons once clicked
