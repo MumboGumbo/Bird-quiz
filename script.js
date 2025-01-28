@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const feedback = document.getElementById('feedback');
     const submitAnswerButton = document.getElementById('submit-answer-button');
 
-    // List of birds with their respective audio files
-    const birds = [
+    // List of birds for Week 1
+    const birdsWeek1 = [
         { name: 'American Crow', audioFile: 'audio/AmericanCrow.mp3' },
         { name: 'American Robin', audioFile: 'audio/AmericanRobin.mp3' },
         { name: 'Bald Eagle', audioFile: 'audio/BaldEagle.mp3' },
@@ -28,6 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Tufted Titmouse', audioFile: 'audio/TuftedTitmouse.mp3' }
     ];
 
+    // List of birds for Week 2
+    const birdsWeek2 = [
+        { name: 'Mallard', audioFile: 'audio/Mallard.mp3' },
+        { name: 'Ruddy Duck', audioFile: 'audio/RuddyDuck.mp3' },
+        { name: 'Snow Goose', audioFile: 'audio/SnowGoose.mp3' },
+        { name: 'Wood Duck', audioFile: 'audio/WoodDuck.mp3' }, // Fixed typo here
+        { name: 'Canada Goose', audioFile: 'audio/CanadaGoose.mp3' },
+        { name: 'Greater White-fronted Goose', audioFile: 'audio/GreatWhite-Fronted.mp3' }
+    ];
+
     // Quiz state variables
     let shuffledBirds = [];
     let currentBirdIndex = 0;
@@ -44,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Initialize the quiz
-    function startQuiz() {
+    function startQuiz(birds) {
         shuffledBirds = shuffle([...birds]); // Shuffle birds for the quiz
         currentBirdIndex = 0;
         score = 0;
@@ -124,20 +134,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Restart the quiz
     function restartQuiz() {
-        startQuiz();
+        startQuiz(shuffledBirds);
     }
 
     // Event listeners
     document.getElementById('week1-button').addEventListener('click', function () {
-        // Hide the Week 1 tab button once clicked
-        document.getElementById('week1-button').style.display = 'none';
+        // Hide all tab buttons once clicked
+        document.querySelectorAll('#tabs button').forEach(button => button.style.display = 'none');
 
         // Show the audio player and quiz content
         weekContent.innerHTML = `<h2>Week 1: Bird Calls</h2><p>Listen to the bird calls and answer the quiz!</p>`;
 
         // Show the audio player and start the quiz
         audioPlayer.style.display = 'block';
-        startQuiz(); // Start the quiz when Week 1 button is clicked
+        startQuiz(birdsWeek1); // Start the quiz with Week 1 birds
+    });
+
+    document.getElementById('week2-button').addEventListener('click', function () {
+        // Hide all tab buttons once clicked
+        document.querySelectorAll('#tabs button').forEach(button => button.style.display = 'none');
+
+        // Show the audio player and quiz content
+        weekContent.innerHTML = `<h2>Week 2: Bird Calls</h2><p>Listen to the bird calls and answer the quiz!</p>`;
+
+        // Show the audio player and start the quiz
+        audioPlayer.style.display = 'block';
+        startQuiz(birdsWeek2); // Start the quiz with Week 2 birds
+    });
+
+    document.getElementById('test-button').addEventListener('click', function () {
+        // Hide all tab buttons once clicked
+        document.querySelectorAll('#tabs button').forEach(button => button.style.display = 'none');
+
+        // Show the audio player and quiz content
+        weekContent.innerHTML = `<h2>Comprehensive Test</h2><p>Listen to the bird calls from all weeks and answer the quiz!</p>`;
+
+        // Combine birds from all weeks for the test
+        const allBirds = [...birdsWeek1, ...birdsWeek2];
+
+        // Show the audio player and start the quiz
+        audioPlayer.style.display = 'block';
+        startQuiz(allBirds); // Start the quiz with all birds
     });
 
     submitAnswerButton.addEventListener('click', checkAnswer);
@@ -148,5 +185,4 @@ document.addEventListener('DOMContentLoaded', () => {
             checkAnswer();
         }
     });
-    
 });
