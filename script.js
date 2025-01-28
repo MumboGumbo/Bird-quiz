@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Mallard', audioFile: 'audio/Mallard.mp3' },
         { name: 'Ruddy Duck', audioFile: 'audio/RuddyDuck.mp3' },
         { name: 'Snow Goose', audioFile: 'audio/SnowGoose.mp3' },
-        { name: 'Wood Duck', audioFile: 'audio/WoodDuck.mp3' }, // Fixed typo here
+        { name: 'Wood Duck', audioFile: 'audio/WoodDuck.mp3' },
         { name: 'Canada Goose', audioFile: 'audio/CanadaGoose.mp3' },
         { name: 'Greater White-fronted Goose', audioFile: 'audio/GreatWhite-Fronted.mp3' }
     ];
