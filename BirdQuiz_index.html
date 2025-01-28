@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Call Quiz</title>
+    <link rel="stylesheet" href="style.css"> <!-- This should be here -->
+</head>
+<body>
+    <h1>Bird Call Quiz</h1>
+    <div id="quiz-container">
+        <!-- Audio player for bird calls -->
+        <audio id="audio-player" controls></audio>
+
+        <!-- Input field for the answer -->
+        <input type="text" id="answer" placeholder="Type your answer here">
+
+        <!-- Submit answer button -->
+        <button id="submit-answer-button">Submit Answer</button>
+
+        <!-- Feedback for correct or incorrect answers -->
+        <div id="feedback"></div>
+
+        <!-- Week selection buttons -->
+        <div id="tabs">
+            <button id="week1-button">Week 1</button>
+            <button id="week2-button">Week 2</button>
+            <button id="test-button">Test</button> 
+        </div>        
+    </div>
+
+    
+    <div id="week-content">
+        <!-- Week 1's bird calls will be displayed here initially -->
+    </div>
+
+    <script src="BirdQuiz_script.js"></script>
+</body>
+</html>
