@@ -103,6 +103,36 @@ button#week1-button:hover {
     background-color: #2ecc71; /* Lighter green on hover */
 }
 
+/* Week 2 Button */
+button#week2-button {
+    background-color: #e67e22; /* Orange background for Week 2 */
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    margin: 10px 5px; /* Match spacing with other buttons */
+}
+
+button#week2-button:hover {
+    background-color: #d35400; /* Darker orange on hover */
+}
+
+/* Test Button */
+button#test-button {
+    background-color: #9b59b6; /* Purple background for Test */
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    margin: 10px 5px; /* Match spacing with other buttons */
+}
+
+button#test-button:hover {
+    background-color: #8e44ad; /* Darker purple on hover */
+}
+
 /* Styling for the week content (quiz screen) */
 #week-content {
     margin-top: 30px;
@@ -178,5 +208,29 @@ button#week1-button:hover {
     #home-button:hover {
         background-color: #45a049;
     }
+   
+    /* Adjust the tabs container for multiple buttons */
+#tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    margin-top: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    /* Ensure buttons stack vertically on smaller screens */
+    #tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button#week1-button,
+    button#week2-button,
+    button#test-button {
+        width: 100%; /* Full width buttons on smaller screens */
+        margin-bottom: 10px; /* Space between stacked buttons */
+    }
+}
     
 }
