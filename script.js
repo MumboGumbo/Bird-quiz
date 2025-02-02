@@ -38,6 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Greater White-fronted Goose', audioFile: 'audio/GreatWhite-Fronted.mp3' }
     ];
 
+    // List of birds for Week 3
+    const birdsWeek3 = [
+        { name: 'Pie-Billed Grebe', audioFile: 'audio/Pie-BilledGrebe.mp3' },
+        { name: 'Ring-Necked Pheasant', audioFile: 'audio/Ring-NeckedPheasant.mp3' },
+        { name: 'Ruffed Grouse', audioFile: 'audio/RuffedGrouse.mp3' },
+        { name: 'Northern Bobwhite', audioFile: 'audio/NorthernBobwhite.mp3' },
+        { name: 'Mourning Dove', audioFile: 'audio/MourningDove.mp3' },
+        { name: 'Eurasian Collard-Dove', audioFile: 'audio/EurasianCollard-Dove.mp3' },
+        { name: 'Wild Turkey', audioFile: 'audio/WildTurkey.mp3' }
+    ];
+
     // Quiz state variables
     let shuffledBirds = [];
     let currentBirdIndex = 0;
@@ -162,6 +173,18 @@ document.addEventListener('DOMContentLoaded', () => {
         startQuiz(birdsWeek2); // Start the quiz with Week 2 birds
     });
     
+    document.getElementById('week3-button').addEventListener('click', function () {
+        // Hide all tab buttons once clicked
+        document.querySelectorAll('#tabs button').forEach(button => button.style.display = 'none');
+
+        // Show the audio player and quiz content
+        weekContent.innerHTML = `<h2>Week 3: Bird Calls</h2><p>Listen to the bird calls and answer the quiz!</p>`;
+
+        // Show the audio player and start the quiz
+        audioPlayer.style.display = 'block';
+        startQuiz(birdsWeek3); // Start the quiz with Week 3 birds
+    });
+
 
     document.getElementById('test-button').addEventListener('click', function () {
         // Hide all tab buttons once clicked
