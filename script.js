@@ -59,7 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Common Nighthawk', audioFile: 'audio/CommonNighthawk.mp3'},
         { name: 'Chimney Swift', audioFile: 'audio/ChimneySwift.mp3'},
         { name: 'Ruby-throated Hummingbird', audioFile: 'audio/Ruby-ThroatedHummingbird.mp3'}
-    ]
+    ];
+    
     // Quiz state variables
     let shuffledBirds = [];
     let currentBirdIndex = 0;
