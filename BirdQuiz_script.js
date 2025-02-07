@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Chuck-wills-widow', audioFile: 'audio/Chuck-Wills-Widow.mp3'},
         { name: 'Common Nighthawk', audioFile: 'audio/CommonNighthawk.mp3'},
         { name: 'Chimney Swift', audioFile: 'audio/ChimneySwift.mp3'},
-        { name: 'Ruby-throated Hummingbird', audioFile: 'audio/Ruby-ThroatedHummingbird'}
+        { name: 'Ruby-throated Hummingbird', audioFile: 'audio/Ruby-ThroatedHummingbird.mp3'}
     ]
     // Quiz state variables
     let shuffledBirds = [];
