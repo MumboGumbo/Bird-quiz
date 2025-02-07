@@ -105,7 +105,7 @@ button#week1-button:hover {
 
 /* Week 2 Button */
 button#week2-button {
-    background-color: #e67e22; /* Orange background for Week 2 */
+    background-color: #ef4cab; /* Orange background for Week 2 */
     font-size: 1rem;
     padding: 10px 20px;
     cursor: pointer;
@@ -115,7 +115,7 @@ button#week2-button {
 }
 
 button#week2-button:hover {
-    background-color: #d35400; /* Darker orange on hover */
+    background-color: #ef4cab; /* Darker orange on hover */
 }
 
 /* Week 3 Button */
@@ -131,6 +131,21 @@ button#week3-button {
 
 button#week3-button:hover {
     background-color: #f6b000; /* Lighter green on hover */
+}
+
+/* Week 4 Button */
+
+button#week4-button {
+    background-color: #e81919;
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
+button#week4-button:hover {
+    background-color: #e81919; /* Lighter green on hover */
 }
 /* Test Button */
 button#test-button {
@@ -242,6 +257,7 @@ button#test-button:hover {
     button#week1-button,
     button#week2-button,
     button#week3-button,
+    button#week4-button,
     button#test-button {
         width: 100%; /* Full width buttons on smaller screens */
         margin-bottom: 10px; /* Space between stacked buttons */
