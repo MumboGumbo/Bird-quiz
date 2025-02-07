@@ -49,6 +49,17 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Wild Turkey', audioFile: 'audio/WildTurkey.mp3' }
     ];
 
+
+    // List of birds for Week 4
+    const birdsWeek4 = [
+        { name: 'Yellow-billed Cuckoo', audioFile: 'audio/Yellow-BilledCuckoo.mp3'},
+        { name: 'Black-billed Cuckoo', audioFile: 'audio/Black-BilledCuckoo.mp3'},
+        { name: 'Eastern Whip-poor-will', audioFile: 'audio/EasternWhip-poor-will.mp3'},
+        { name: 'Chuck-wills-widow', audioFile: 'audio/Chuck-Wills-Widow.mp3'},
+        { name: 'Common Nighthawk', audioFile: 'audio/CommonNighthawk.mp3'},
+        { name: 'Chimney Swift', audioFile: 'audio/ChimneySwift.mp3'},
+        { name: 'Ruby-throated Hummingbird', audioFile: 'audio/Ruby-ThroatedHummingbird'}
+    ]
     // Quiz state variables
     let shuffledBirds = [];
     let currentBirdIndex = 0;
@@ -183,6 +194,18 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show the audio player and start the quiz
         audioPlayer.style.display = 'block';
         startQuiz(birdsWeek3); // Start the quiz with Week 3 birds
+    });
+
+    document.getElementById('week4-button').addEventListener('click', function () {
+        // Hide all tab buttons once clicked
+        document.querySelectorAll('#tabs button').forEach(button => button.style.display = 'none');
+
+        // Show the audio player and quiz content
+        weekContent.innerHTML = `<h2>Week 4: Bird Calls</h2><p>Listen to the bird calls and answer the quiz!</p>`;
+
+        // Show the audio player and start the quiz
+        audioPlayer.style.display = 'block';
+        startQuiz(birdsWeek4); // Start the quiz with Week 3 birds
     });
 
 
