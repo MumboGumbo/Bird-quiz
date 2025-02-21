@@ -40,12 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // List of birds for Week 3
     const birdsWeek3 = [
-        { name: 'Pie-Billed Grebe', audioFile: 'audio/Pie-BilledGrebe.mp3' },
+        { name: 'Pied-Billed Grebe', audioFile: 'audio/Pie-BilledGrebe.mp3' },
         { name: 'Ring-Necked Pheasant', audioFile: 'audio/Ring-NeckedPheasant.mp3' },
         { name: 'Ruffed Grouse', audioFile: 'audio/RuffedGrouse.mp3' },
         { name: 'Northern Bobwhite', audioFile: 'audio/NorthernBobwhite.mp3' },
         { name: 'Mourning Dove', audioFile: 'audio/MourningDove.mp3' },
-        { name: 'Eurasian Collard-Dove', audioFile: 'audio/EurasianCollard-Dove.mp3' },
+        { name: 'Eurasian Collared-Dove', audioFile: 'audio/EurasianCollard-Dove.mp3' },
         { name: 'Wild Turkey', audioFile: 'audio/WildTurkey.mp3' }
     ];
 
@@ -59,6 +59,16 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Common Nighthawk', audioFile: 'audio/CommonNighthawk.mp3'},
         { name: 'Chimney Swift', audioFile: 'audio/ChimneySwift.mp3'},
         { name: 'Ruby-throated Hummingbird', audioFile: 'audio/Ruby-ThroatedHummingbird.mp3'}
+    ];
+
+     // List of birds for Week 5
+     const birdsWeek5 = [
+        { name: 'Ring-Billed Gull', audioFile: 'audio/RingbilledGull.mp3'},
+        { name: 'Sandhill Crane', audioFile: 'audio/SandhillCrane.mp3'},
+        { name: 'Sora', audioFile: 'audio/Sora.mp3'},
+        { name: 'Atlantic Puffin', audioFile: 'audio/AtlanticPuffin.mp3'},
+        { name: 'King Rail', audioFile: 'audio/KingRail.mp3'}
+      
     ];
     
     // Quiz state variables
@@ -209,6 +219,18 @@ document.addEventListener('DOMContentLoaded', () => {
         startQuiz(birdsWeek4); // Start the quiz with Week 3 birds
     });
 
+    document.getElementById('week5-button').addEventListener('click', function () {
+        // Hide all tab buttons once clicked
+        document.querySelectorAll('#tabs button').forEach(button => button.style.display = 'none');
+
+        // Show the audio player and quiz content
+        weekContent.innerHTML = `<h2>Week 5: Bird Calls</h2><p>Listen to the bird calls and answer the quiz!</p>`;
+
+        // Show the audio player and start the quiz
+        audioPlayer.style.display = 'block';
+        startQuiz(birdsWeek5); // Start the quiz with Week 1 birds
+    });
+
 
     document.getElementById('test-button').addEventListener('click', function () {
         // Hide all tab buttons once clicked
@@ -218,8 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
         weekContent.innerHTML = `<h2>Comprehensive Test</h2><p>Listen to the bird calls from all weeks and answer the quiz!</p>`;
 
         // Combine birds from all weeks for the test
-        const allBirds = [...birdsWeek1, ...birdsWeek2, ...birdsWeek3, ...birdsWeek4];
-
+        const allBirds = [...birdsWeek1, ...birdsWeek2, ...birdsWeek3, ...birdsWeek4, ...birdsWeek5];
 
         // Show the audio player and start the quiz
         audioPlayer.style.display = 'block';
