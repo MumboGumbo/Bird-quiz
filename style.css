@@ -144,8 +144,19 @@ button#week4-button {
     border-radius: 5px;
 }
 
+/* Week 5 Button */
+
+button#week5-button {
+    background-color: #008cff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
 button#week4-button:hover {
-    background-color: #e81919; /* Lighter green on hover */
+    background-color: #008cff; /* Lighter green on hover */
 }
 /* Test Button */
 button#test-button {
