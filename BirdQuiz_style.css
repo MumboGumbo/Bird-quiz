@@ -155,8 +155,23 @@ button#week5-button {
     border-radius: 5px;
 }
 
-button#week4-button:hover {
+button#week5-button:hover {
     background-color: #008cff; /* Lighter green on hover */
+}
+
+/* Week 6 Button */
+
+button#week6-button {
+    background-color: #00ffc8;
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
+button#week6-button:hover {
+    background-color: #00ffc8; /* Lighter green on hover */
 }
 /* Test Button */
 button#test-button {
@@ -269,6 +284,8 @@ button#test-button:hover {
     button#week2-button,
     button#week3-button,
     button#week4-button,
+    button#week5-button,
+    button#week6-button,
     button#test-button {
         width: 100%; /* Full width buttons on smaller screens */
         margin-bottom: 10px; /* Space between stacked buttons */
