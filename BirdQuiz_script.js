@@ -68,8 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Sora', audioFile: 'audio/Sora.mp3'},
         { name: 'Atlantic Puffin', audioFile: 'audio/AtlanticPuffin.mp3'},
         { name: 'King Rail', audioFile: 'audio/KingRail.mp3'}
-      
     ];
+
+     // List of birds for Week 6
+     const birdsWeek6 = [
+        { name: 'Killdeer', audioFile: 'audio/Killdeer.mp3'},
+        { name: 'Upland Sandpiper', audioFile: 'audio/UplandSandpiper.mp3'},
+        { name: 'Wilsons Snipe', audioFile: 'audio/WilsonsSnipe.mp3'},
+        { name: 'American Woodcock', audioFile: 'audio/AmericanWoodcock.mp3'}
+     ];
+
     
     // Quiz state variables
     let shuffledBirds = [];
@@ -231,6 +239,19 @@ document.addEventListener('DOMContentLoaded', () => {
         startQuiz(birdsWeek5); // Start the quiz with Week 1 birds
     });
 
+    document.getElementById('week6-button').addEventListener('click', function () {
+        // Hide all tab buttons once clicked
+        document.querySelectorAll('#tabs button').forEach(button => button.style.display = 'none');
+
+        // Show the audio player and quiz content
+        weekContent.innerHTML = `<h2>Week 6: Bird Calls</h2><p>Listen to the bird calls and answer the quiz!</p>`;
+
+        // Show the audio player and start the quiz
+        audioPlayer.style.display = 'block';
+        startQuiz(birdsWeek6); // Start the quiz with Week 1 birds
+    });
+
+
 
     document.getElementById('test-button').addEventListener('click', function () {
         // Hide all tab buttons once clicked
@@ -240,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
         weekContent.innerHTML = `<h2>Comprehensive Test</h2><p>Listen to the bird calls from all weeks and answer the quiz!</p>`;
 
         // Combine birds from all weeks for the test
-        const allBirds = [...birdsWeek1, ...birdsWeek2, ...birdsWeek3, ...birdsWeek4, ...birdsWeek5];
+        const allBirds = [...birdsWeek1, ...birdsWeek2, ...birdsWeek3, ...birdsWeek4, ...birdsWeek5, ...birdsWeek6];
 
         // Show the audio player and start the quiz
         audioPlayer.style.display = 'block';
