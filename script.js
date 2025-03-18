@@ -68,14 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Sora', audioFile: 'audio/Sora.mp3'},
         { name: 'Atlantic Puffin', audioFile: 'audio/AtlanticPuffin.mp3'},
         { name: 'King Rail', audioFile: 'audio/KingRail.mp3'}
+      
     ];
 
-     // List of birds for Week 6
+     // List of birds for Week 5
      const birdsWeek6 = [
         { name: 'Killdeer', audioFile: 'audio/Killdeer.mp3'},
         { name: 'Upland Sandpiper', audioFile: 'audio/UplandSandpiper.mp3'},
         { name: 'Wilsons Snipe', audioFile: 'audio/WilsonsSnipe.mp3'},
-        { name: 'American Woodcock', audioFile: 'audio/AmericanWoodcock.mp3'}
+        { name: 'American Woodcock', audioFile: 'audio/AmericanWoodcock.mp3'},
+
      ];
 
     
@@ -261,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
         weekContent.innerHTML = `<h2>Comprehensive Test</h2><p>Listen to the bird calls from all weeks and answer the quiz!</p>`;
 
         // Combine birds from all weeks for the test
-        const allBirds = [...birdsWeek1, ...birdsWeek2, ...birdsWeek3, ...birdsWeek4, ...birdsWeek5, ...birdsWeek6];
+        const allBirds = [...birdsWeek1, ...birdsWeek2, ...birdsWeek3, ...birdsWeek4, ...birdsWeek5, ...birdsWeek6,];
 
         // Show the audio player and start the quiz
         audioPlayer.style.display = 'block';
