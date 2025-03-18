@@ -78,6 +78,13 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'American Woodcock', audioFile: 'audio/AmericanWoodcock.mp3'}
      ];
 
+     // List of birds for Week 7
+     const birdsWeek7 = [
+        { name: 'American Bittern', audioFile: 'audio/AmericanBittern.mp3'},
+        { name: 'Belter Kingfisher', audioFile: 'audio/BeltedKingfisher.mp3'},
+        { name: 'Great Blue Heron', audioFile: 'audio/GreatBlueHeron.mp3'},
+        { name: 'Common Loon', audioFile: 'audio/CommonLoon.mp3'}
+     ];
     
     // Quiz state variables
     let shuffledBirds = [];
@@ -251,6 +258,17 @@ document.addEventListener('DOMContentLoaded', () => {
         startQuiz(birdsWeek6); // Start the quiz with Week 1 birds
     });
 
+    document.getElementById('week7-button').addEventListener('click', function () {
+        // Hide all tab buttons once clicked
+        document.querySelectorAll('#tabs button').forEach(button => button.style.display = 'none');
+
+        // Show the audio player and quiz content
+        weekContent.innerHTML = `<h2>Week 7: Bird Calls</h2><p>Listen to the bird calls and answer the quiz!</p>`;
+
+        // Show the audio player and start the quiz
+        audioPlayer.style.display = 'block';
+        startQuiz(birdsWeek7); // Start the quiz with Week 1 birds
+    });
 
 
     document.getElementById('test-button').addEventListener('click', function () {
@@ -261,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
         weekContent.innerHTML = `<h2>Comprehensive Test</h2><p>Listen to the bird calls from all weeks and answer the quiz!</p>`;
 
         // Combine birds from all weeks for the test
-        const allBirds = [...birdsWeek1, ...birdsWeek2, ...birdsWeek3, ...birdsWeek4, ...birdsWeek5, ...birdsWeek6];
+        const allBirds = [...birdsWeek1, ...birdsWeek2, ...birdsWeek3, ...birdsWeek4, ...birdsWeek5, ...birdsWeek6, ...birdsWeek7];
 
         // Show the audio player and start the quiz
         audioPlayer.style.display = 'block';
