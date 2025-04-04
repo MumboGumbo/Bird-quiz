@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
      // List of birds for Week 7
      const birdsWeek7 = [
         { name: 'American Bittern', audioFile: 'audio/AmericanBittern.mp3'},
-        { name: 'Belter Kingfisher', audioFile: 'audio/BeltedKingfisher.mp3'},
+        { name: 'Belted Kingfisher', audioFile: 'audio/BeltedKingfisher.mp3'},
         { name: 'Great Blue Heron', audioFile: 'audio/GreatBlueHeron.mp3'},
         { name: 'Common Loon', audioFile: 'audio/CommonLoon.mp3'}
      ];
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Great Horned Owl', audioFile: 'audio/GreatHornedOwl.mp3'},
         { name: 'Mississippi Kite', audioFile: 'audio/MississippiKite.mp3'},
         { name: 'Northern Saw-Whet', audioFile: 'audio/NorthernSaw-Whet.mp3'},
-        { name: 'Red-Shouldered Hawk', audioFile: 'audio/Red-shoulderedHawk.mp3'},
+        { name: 'Red-shouldered Hawk', audioFile: 'audio/Red-shoulderedHawk.mp3' },
         { name: 'Red-Tailed Hawk', audioFile: 'audio/Red-tailedHawk.mp3'},
         { name: 'Peregrine Falcon', audioFile: 'audio/PeregrineFalcon.mp3'},
         { name: 'American Kestrel', audioFile: 'audio/AmericanKestrel.mp3'},
