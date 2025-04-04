@@ -108,9 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Downy Woodpecker', audioFile: 'audio/DownyWoodpecker.mp3'}, 
         { name: 'Pileated Woodpecker', audioFile: 'audio/PileatedWoodpecker.mp3'}, 
         { name: 'Great Crested Flycatcher', audioFile: 'audio/GreatCrestedFlycatcher.mp3'},
-        { name: 'Northern Flicker ', audioFile: 'audio/NorthernFlicker.mp3'}, 
+        { name: 'Northern Flicker', audioFile: 'audio/NorthernFlicker.mp3'}, 
         { name: 'Red-headed Woodpecker', audioFile: 'audio/Red-HeadedWoodpecker.mp3'}, 
-        { name: 'Red-bellied Woodpecker ', audioFile: 'audio/Red-belliedWoodpecker.mp3'},
+        { name: 'Red-bellied Woodpecker', audioFile: 'audio/Red-belliedWoodpecker.mp3'},
      ];
 
     // Quiz state variables
