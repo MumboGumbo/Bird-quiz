@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
      // List of birds for Week 7
      const birdsWeek7 = [
         { name: 'American Bittern', audioFile: 'audio/AmericanBittern.mp3'},
-        { name: 'Belted Kingfisher', audioFile: 'audio/BeltedKingfisher.mp3'},
+        { name: 'Belter Kingfisher', audioFile: 'audio/BeltedKingfisher.mp3'},
         { name: 'Great Blue Heron', audioFile: 'audio/GreatBlueHeron.mp3'},
         { name: 'Common Loon', audioFile: 'audio/CommonLoon.mp3'}
      ];
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Great Horned Owl', audioFile: 'audio/GreatHornedOwl.mp3'},
         { name: 'Mississippi Kite', audioFile: 'audio/MississippiKite.mp3'},
         { name: 'Northern Saw-Whet', audioFile: 'audio/NorthernSaw-Whet.mp3'},
-        { name: 'Red-shouldered Hawk', audioFile: 'audio/Red-shoulderedHawk.mp3' },
+        { name: 'Red-Shouldered Hawk', audioFile: 'audio/Red-shoulderedHawk.mp3'},
         { name: 'Red-Tailed Hawk', audioFile: 'audio/Red-tailedHawk.mp3'},
         { name: 'Peregrine Falcon', audioFile: 'audio/PeregrineFalcon.mp3'},
         { name: 'American Kestrel', audioFile: 'audio/AmericanKestrel.mp3'},
@@ -112,6 +112,26 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Red-headed Woodpecker', audioFile: 'audio/Red-HeadedWoodpecker.mp3'}, 
         { name: 'Red-bellied Woodpecker', audioFile: 'audio/Red-belliedWoodpecker.mp3'},
      ];
+
+     //List of birds for Week 10 
+     const birdsWeek10 = [
+     { name: 'American Crow', audioFile: 'audio/AmericanCrow.mp3'},
+     { name: 'Barn Swallow', audioFile: 'audio/BarnSwallow.mp3'},
+     { name: 'Black-capped Chickadee', audioFile: 'audio/Black-CappedChickadee.mp3'},
+     { name: 'Blue Jay', audioFile: 'audio/BlueJay.mp3'},
+     { name: 'Blue-gray Gnatcatcher', audioFile: 'audio/Blue-GrayGnatcatcher.mp3'},
+     { name: 'Carolina Chickadee', audioFile: 'audio/CarolinaChickadee.mp3'},
+     { name: 'Carolina Wren', audioFile: 'audio/CarolinaWren.mp3'},
+     { name: 'Fish Crow', audioFile: 'audio/FishCrow.mp3'},
+     { name: 'House Wren', audioFile: 'audio/HouseWren.mp3'},
+     { name: 'Red-eyed Vireo', audioFile: 'audio/Red-EyedVireo.mp3'},
+     { name: 'Tufted Titmouse', audioFile: 'audio/TuftedTitmouse.mp3'},
+     { name: 'Warbling Vireo', audioFile: 'audio/WarblingVireo.mp3'},
+     { name: 'White-breasted Nuthatch', audioFile: 'audio/White-BreastedNuthatch.mp3'},
+     { name: 'White-eyed Vireo', audioFile: 'audio/White-EyedVireo.mp3'},
+     { name: 'Yellow-thoated Vireo', audioFile: 'audio/Yellow-ThroatedVireo.mp3'},
+  ]
+    
 
     // Quiz state variables
     let shuffledBirds = [];
@@ -321,6 +341,18 @@ document.addEventListener('DOMContentLoaded', () => {
         startQuiz(birdsWeek9); // Start the quiz with Week 1 birds
     });
 
+    document.getElementById('week10-button').addEventListener('click', function () {
+        // Hide all tab buttons once clicked
+        document.querySelectorAll('#tabs button').forEach(button => button.style.display = 'none');
+
+        // Show the audio player and quiz content
+        weekContent.innerHTML = `<h2>Week 10: Bird Calls</h2><p>Listen to the bird calls and answer the quiz!</p>`;
+
+        // Show the audio player and start the quiz
+        audioPlayer.style.display = 'block';
+        startQuiz(birdsWeek10); // Start the quiz with Week 1 birds
+    });
+
 
     document.getElementById('test-button').addEventListener('click', function () {
         // Hide all tab buttons once clicked
@@ -330,7 +362,7 @@ document.addEventListener('DOMContentLoaded', () => {
         weekContent.innerHTML = `<h2>Comprehensive Test</h2><p>Listen to the bird calls from all weeks and answer the quiz!</p>`;
 
         // Combine birds from all weeks for the test
-        const allBirds = [...birdsWeek1, ...birdsWeek2, ...birdsWeek3, ...birdsWeek4, ...birdsWeek5, ...birdsWeek6, ...birdsWeek7, ...birdsWeek8, ...birdsWeek9,];
+        const allBirds = [...birdsWeek1, ...birdsWeek2, ...birdsWeek3, ...birdsWeek4, ...birdsWeek5, ...birdsWeek6, ...birdsWeek7, ...birdsWeek8, ...birdsWeek9, ...birdsWeek10];
 
         // Show the audio player and start the quiz
         audioPlayer.style.display = 'block';
