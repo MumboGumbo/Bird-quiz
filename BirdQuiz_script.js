@@ -131,8 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
      { name: 'White-eyed Vireo', audioFile: 'audio/White-EyedVireo.mp3'},
      { name: 'Yellow-thoated Vireo', audioFile: 'audio/Yellow-ThroatedVireo.mp3'},
   ];
-  
-    
+
+
 
     // Quiz state variables
     let shuffledBirds = [];
