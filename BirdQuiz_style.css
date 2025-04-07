@@ -219,6 +219,22 @@ button#week9-button:hover {
    background-color: rgba(153, 145, 30, 0.788);
 }
 
+/* Week 10 Button */
+
+button#week10-button {
+    background-color: rgba(255, 161, 110, 0.788);
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
+button#week10-button:hover {
+   background-color: rgba(255, 161, 110, 0.788);
+}
+
+
 /* Test Button */
 button#test-button {
     background-color: #9b59b6; /* Purple background for Test */
@@ -335,6 +351,7 @@ button#test-button:hover {
     button#week7-button,
     button#week8-button,
     button#week9-button,
+    button#week10-button,
     button#test-button {
         width: 100%; /* Full width buttons on smaller screens */
         margin-bottom: 10px; /* Space between stacked buttons */
